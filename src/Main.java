@@ -2,7 +2,6 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
     public static void main(String[] args) {
- //       Parole parole = new Parole("123", "pass", ""); --------- ЭТО ВСЕ НЕ ТРУ
 
         allChecksLoginAndPass("log", "password", "password");
         allChecksLoginAndPass("log123232131231231231221231gfsdgsdgfdgsdfg23123123", "password", "password");
