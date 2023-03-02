@@ -1,4 +1,5 @@
 public class Parole {
+    ///////////////// не юзаем
     private String Login;
     private String Password;
     private String confirmPassword;

@@ -5,6 +5,9 @@ public class Main {
  //       Parole parole = new Parole("123", "pass", ""); --------- ЭТО ВСЕ НЕ ТРУ
 
         allChecksLoginAndPass("log", "password", "password");
+        allChecksLoginAndPass("log123232131231231231221231gfsdgsdgfdgsdfg23123123", "password", "password");
+        allChecksLoginAndPass("log", "password1", "password");
+        allChecksLoginAndPass("login", "password", "ssddsad22");
     }
 
 
@@ -18,10 +21,10 @@ public class Main {
             checkPassword(password, confirmPassword);
             return true;
         } catch (WrongLoginException exception) {
-            System.out.println(" wrong log" + exception.getMessage());
+            System.out.println(" wrong login- " + exception.getMessage());
             return false;
         } catch (WrongPassException exception) {
-            System.out.println(" wrong pass"+ exception.getMessage());
+            System.out.println(" wrong password- "+ exception.getMessage());
             return false;
         }
     }
@@ -30,7 +33,7 @@ public class Main {
     // метод на проверку логина
     private static void checkLogin(String login) {
         if (loginLenght(login, 20) || alpabetTest(login)) {
-            throw new WrongLoginException("login is wrong");
+            throw new WrongLoginException(" login is wrong ");
         }
 
     }
@@ -38,7 +41,7 @@ public class Main {
     // метод на проверку пассворда и подтверждения пассворда
     private static void checkPassword(String password, String confirmPassword) {
         if (loginLenght(password, 20) || alpabetTest(password) || equalsString(password, confirmPassword)) {
-            throw new WrongPassException("Pass is wrong");
+            throw new WrongPassException(" Pass is wrong ");
         }
     }
 
