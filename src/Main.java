@@ -7,6 +7,8 @@ public class Main {
         allChecksLoginAndPass("log123232131231231231221231gfsdgsdgfdgsdfg23123123", "password", "password");
         allChecksLoginAndPass("log", "password1", "password");
         allChecksLoginAndPass("login", "password", "ssddsad22");
+        allChecksLoginAndPass("loGin", "paSsword", "sSSddsad22");
+        allChecksLoginAndPass("Viking#", "123456", "123456");
     }
 
 
@@ -19,6 +21,7 @@ public class Main {
             checkLogin(login);
             checkPassword(password, confirmPassword);
             return true;
+
         } catch (WrongLoginException exception) {
             System.out.println(" wrong login- " + exception.getMessage());
             return false;
@@ -60,7 +63,7 @@ public class Main {
     private static boolean alpabetTest(String string) {
         final String alphabet = "qwertyuiopasdfghjklzxcvbnm1234567890_";
         for (int i = 0; i < string.length(); i++) {
-            if (!alphabet.contains(String.valueOf(string.charAt(i)))) {
+            if (!alphabet.contains(String.valueOf(string.charAt(i)).toLowerCase())) {
                 return true;
             }
         }
