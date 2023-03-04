@@ -9,6 +9,7 @@ public class Main {
         allChecksLoginAndPass("login", "password", "ssddsad22");
         allChecksLoginAndPass("loGin", "paSsword", "sSSddsad22");
         allChecksLoginAndPass("Viking#", "123456", "123456");
+        allChecksLoginAndPass("Viking#", "123456", "133456");
     }
 
 
